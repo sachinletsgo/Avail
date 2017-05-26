@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/SachinTyagi/SachinTyagi/D/Code/AndroidCode/ST/Avail/filecreate/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="350510b7de9e964498e96d7f99eb8d2c88001a34">
+        <dex dex="/Users/SachinTyagi/SachinTyagi/D/Code/AndroidCode/ST/Avail/app/build/intermediates/pre-dexed/debug/classes_4d18e236d3e0ad790c3f3fe8745cac00baeb8e9c.jar" />
+    </item>
+
+</items>
