@@ -59,7 +59,7 @@ public  class WriteFile {
         else
             text = "\n" + android.text.format.DateFormat.format("yyyy-MM-dd hh:mm:ss", new java.util.Date()).toString() + "\n" + text;
         File logFile;
-        int maxFileSize = 1024 * 1024 * 5;
+        int maxFileSize = 5242880;//5242880= 1024 * 1024 * 5;
 
 
         File newDir = new File(filePath);
@@ -145,5 +145,16 @@ public  class WriteFile {
         }
         return lastModifiedFile;
     }
+
+
+
+
+
+    /////////
+
+
+    //////////
+
+
 
 }
