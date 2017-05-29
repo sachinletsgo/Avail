@@ -1,32 +1,47 @@
-## Welcome to GitHub Pages
+## Welcome to Avail
 
-You can use the [editor on GitHub](https://github.com/sachinletsgo/Avail/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+By this library, any one can write any log into log file. whuch may be used to track the response and behaviour of application. 
 
 ### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Avail is easy to use. Below is step bt step process how to use it
 
 ```markdown
-Syntax highlighted code block
+### Step 1.  Add it in your root build.gradle at the end of repositories:
 
-# Header 1
-## Header 2
-### Header 3
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+  
+### Step 2. Add the dependency
+dependencies {
+	        compile 'com.github.sachinletsgo.Avail:filecreate:0.0.2'
+	}
+### Step 3. Add the folling code in the Application class (onCreate() method)
+ This will be initlize single time 
+                AddLog.init("/SD/DCIM/",getApplicationContext(),"0.0.1");
+                In the above code we have to pass 3 paramter
+                - Path for file creation.
+                - Context of application.
+                - App version.
+                
+ You may add follwoing paramter also (optional) 
+ - To add the desired date format
+                AddLog.setDateFormat("yyyy-MM-dd hh:mm:ss");
+ - Add device name 
+                AddLog.setDeviceName("Moto e");
+ - File should be recycled
+                AddLog.setIsFileRecycled(true);
+ - Maximum file size  
+                AddLog.setMaxFileSize(1024*5);
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+### Step 4. Add the folling code in the file to lock in the file
+               AddLog.appendLog("Who are you", true);
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
 
